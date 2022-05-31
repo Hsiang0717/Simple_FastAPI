@@ -1,0 +1,253 @@
+<html lang="en" class="">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>後臺管理</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/mdbootstrap/pen/qPKMaN">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    .hm-gradient {
+      background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    }
+
+    .navbar .dropdown-menu a:hover {
+      color: #616161 !important;
+    }
+
+    .darken-grey-text {
+      color: #2E2E2E;
+    }
+    .Search {
+      float:left
+    }
+  </style>
+  <style type="text/css">
+   .rwd-table {
+     background: #fff;
+     overflow: hidden;
+   }
+
+   .rwd-table tr:nth-of-type(2n){
+     background: #eee;
+   }
+   .rwd-table th, 
+   .rwd-table td {
+     margin: 0.5em 1em;
+   }
+   .rwd-table {
+     min-width: 100%;
+   }
+
+   .rwd-table th {
+     display: none;
+   }
+
+   .rwd-table td {
+     display: block;
+   }
+
+   .rwd-table td:before {
+     content: attr(data-th) " : ";
+     font-weight: bold;
+     width: 6.5em;
+     display: inline-block;
+   }
+
+   .rwd-table th, .rwd-table td {
+     text-align: left;
+   }
+
+   .rwd-table th, .rwd-table td:before {
+     color: #D20B2A;
+     font-weight: bold;
+   }
+
+   @media (min-width: 480px) {
+     .rwd-table td:before {
+       display: none;
+     }
+    .rwd-table th, .rwd-table td {
+       display: table-cell;
+       padding: 0.25em 0.5em;
+     }
+     .rwd-table th:first-child, 
+     .rwd-table td:first-child {
+       padding-left: 0;
+     }
+     .rwd-table th:last-child, 
+     .rwd-table td:last-child {
+       padding-right: 0;
+     }
+      .rwd-table th, 
+      .rwd-table td {
+       padding: 1em !important;
+     }
+   }
+</style>
+</head>
+
+<body class="hm-gradient">
+
+  <main>
+
+    <div class="container mt-4">
+      <!--Navbar blue-->
+      <nav class="navbar navbar-expand-lg navbar-dark Blue mb-2">
+        <a class="navbar-brand" href="#"><h2><b>管理</b></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect waves-light" href="#">帳號總覽 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="#">授權紀錄</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="#">使用紀錄</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+              </div>
+            </li> -->
+          </ul>
+          <form class="form-inline waves-effect waves-light">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
+
+      <!--/.Navbar blue-->
+      <!--Navbar -->
+      <div class="container ">
+        <button type="button" data-func="dt-add" class="btn btn-success btn-xs dt-add Search">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true">編輯</span>
+          </button>
+          <button type="button" data-func="dt-add" class="btn btn-success btn-xs dt-add Search">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true">編輯</span>
+            </button>
+            <button type="button" data-func="dt-add" class="btn btn-success btn-xs dt-add Search">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true">編輯</span>
+              </button>
+          <form class="form-inline waves-effect waves-light Search">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+      </div>
+      <div class="container ">
+       
+            <div class="mt col-md-12">
+               <table class="rwd-table">
+                 <tbody>
+                  <tr>
+                   <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                   <th>帳號</th>
+                   <th>信箱</th>
+                   <th>公司</th>
+                   <th>聯絡方式</th>
+                   <th>狀態</th>
+                   <th style="text-align:center;width:100px;">Add row 
+                     <button type="button" data-func="dt-add" class="btn btn-success btn-xs dt-add">
+                     <span class="glyphicon glyphicon-plus" aria-hidden="true">編輯</span>
+                     </button>
+                  </th>
+                 </tr>
+                 {% for recipes in recipe %}
+                 <tr>
+                  <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                   <td data-th="旅遊名稱">【早鳥送、最高再省8000】</td>
+                   <td data-th="出發日">03/23〔三〕	</td>
+                   <td data-th="售價">$119,900</td>
+                   <td data-th="機位">26</td>
+                   <td data-th="可售">6</td>
+                   <td>
+                     <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;">
+                         <span class="glyphicon glyphicon-pencil" aria-hidden="true">編輯</span>
+                     </button>
+                     <button type="button" class="btn btn-danger btn-xs dt-delete">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true">編輯</span>
+                     </button>
+                 </td>
+                 </tr>
+                 <tr>
+                  <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                   <td data-th="旅遊名稱">【早鳥送、最高再省8000】</td>
+                   <td data-th="出發日">03/30〔三〕	</td>
+                   <td data-th="售價">$129,900</td>
+                   <td data-th="機位">26</td>
+                   <td data-th="可售">6</td>
+                   <td>
+                     <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;">
+                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                     </button>
+                     <button type="button" class="btn btn-danger btn-xs dt-delete">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                     </button>
+                 </td>
+                 </tr>
+                 <tr>
+                  <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                   <td data-th="旅遊名稱">【早鳥送、最高再省8000】</td>
+                   <td data-th="出發日">04/06〔三〕	</td>
+                   <td data-th="售價">$129,900</td>
+                   <td data-th="機位">26</td>
+                   <td data-th="可售">6</td>
+                   <td>
+                     <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;">
+                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                     </button>
+                     <button type="button" class="btn btn-danger btn-xs dt-delete">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                     </button>
+                 </td>
+                 </tr>
+                 <tr>
+                  <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                   <td data-th="旅遊名稱">【早鳥送、最高再省8000】 </td>
+                   <td data-th="出發日">04/13〔三〕	</td>
+                   <td data-th="售價">$129,900</td>
+                   <td data-th="機位">26</td>
+                   <td data-th="可售">6</td>
+                   <td>
+                     <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;">
+                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                     </button>
+                     <button type="button" class="btn btn-danger btn-xs dt-delete">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                     </button>
+                 </td>
+                 </tr>
+                 {% endfor %}
+               </tbody>
+            </table>
+            </div>
+      </div>
+  </main>
+
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+</body>
+
+</html>
+
+  

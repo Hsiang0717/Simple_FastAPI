@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <h2>123</h2>
+        {% for recipes in recipe %}
+        <h2>{{recipes.account}}</h2>
+        <h2>{{recipes.hashed_password}}</h2>
+        <h2>{{recipes.email}}</h2>
+        <h2>{{recipes.company}}</h2>
+        <h2>{{recipes.phone}}</h2>
+        <h2>{{recipes.is_active}}</h2>
+        {% endfor %}
+    </body>
+</html>
